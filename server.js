@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static("./static"));
-
-app.listen(5000, function () {
-  console.log("Serving static on http://localhost:5000");
+const port = process.env.PORT || 5000;
+app.listen(port, function () {
+  console.log("Serving static on http://localhost:" + port);
 });
